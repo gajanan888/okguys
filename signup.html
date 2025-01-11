@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="background">
+        <div class="floating-circle"></div>
+        <div class="floating-circle second"></div>
+        <div class="form-container">
+            <form class="register-form">
+                <h2>Sign In</h2>
+                <div class="input-field">
+                    <input type="text" id="fullname" placeholder="Full Name" required>
+                </div>
+
+                <label for="Role">
+                Role:
+                <select name="Role" id="role" onchange="toggleOccupation()">
+                    <option value="">Select Role</option>
+                    <option value="Service provider">Service Provider</option>
+                    <option value="Customer">Customer</option>
+                </select>
+                </label>
+                <label for="occupation" id="occupation-label" style="display: none;">
+                Occupation:
+                <select name="occupation" id="occupation">
+                    <option value="Electrician">Electrician</option>
+                    <option value="Laundry">Laundry</option>
+                </select>
+            </label>
+                <div class="input-field">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+                <p class="forgot-password">
+                    <a href="forget-password.html">Forgot Password</a>
+                </p>
+                <p class="login-text">
+                    Already have an account? <a href="login.html">Login Here</a>
+                </p>
+            </form>
+        </div>
+    </div>
+    <script>
+        function toggleOccupation() {
+            const role = document.getElementById('role').value;
+            const occupationLabel = document.getElementById('occupation-label');
+            if (role === 'Service provider') {
+                occupationLabel.style.display = 'block';
+            } else {
+                occupationLabel.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

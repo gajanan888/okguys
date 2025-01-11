@@ -1,0 +1,159 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+/* Animated Background */
+.background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #fbc2eb, #a6c1ee, #f9d423, #ff6f91);
+    background-size: 400% 400%;
+    animation: gradient-animation 10s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Gradient Animation */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Floating Circles */
+.floating-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float-animation 6s ease-in-out infinite;
+    filter: blur(20px);
+}
+
+.floating-circle.second {
+    width: 300px;
+    height: 300px;
+    animation-delay: 2s;
+    left: 20%;
+    top: 10%;
+}
+
+.floating-circle {
+    width: 200px;
+    height: 200px;
+}
+
+@keyframes float-animation {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+
+/* Form Container */
+.form-container {
+    position: relative;
+    z-index: 2;
+    width: 350px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    animation: form-pop 2s ease;
+    text-align: center;
+}
+
+/* Form Entrance Animation */
+@keyframes form-pop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Form Title */
+form h2 {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-field {
+    margin-bottom: 20px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-field input:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+/* Register Button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #ff6f91;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #e05673;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #000000;
+}
+
+.forgot-password a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Login Text */
+.login-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #159eb4;
+}
+
+.login-text a {
+    color: #eb0707;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
